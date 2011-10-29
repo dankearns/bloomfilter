@@ -7,7 +7,7 @@ var v = vows.describe("bloomfilter pictures").addBatch({
     "a bloom filter with entries": {
         topic: function() {
             var f = new BloomFilter(10,0.22);
-            var str = [ 27, "ZEBRA", "@dossier", "muon" ];
+            var str = [ "riposuction", "ZEBRA", "@dossier", "muon" ];
             var items = 0;
             _.each(str, function(s) { 
                 f.add(s); 
@@ -23,6 +23,7 @@ var v = vows.describe("bloomfilter pictures").addBatch({
                 return f.test(item);
             }));
             assert.isTrue(/X/.test(pic));
+            console.log("    (" + f.bitslots[0] + ") as bits:");
             console.log("|--------------------------------|");
             console.log("|" + pic + "|");
             console.log("|--------------------------------|");

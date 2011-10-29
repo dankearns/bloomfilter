@@ -2,5 +2,5 @@
   "name"         : "bloomfilter",
   "version"      : "0.0.1",
   "main"         : "bloomfilter.js",
-  "dependencies" : { "vows": "0.5.11" }
+  "dependencies" : { "vows": "0.5.11", "underscore": "1.2.1" }
 }

@@ -1,0 +1,5 @@
+{
+  "name" : "murmurhash",
+  "version": "0.0.1",
+  "main": "./murmurhash3_gc.js"
+}

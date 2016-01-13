@@ -7,7 +7,7 @@ var v = vows.describe("bloomfilter").addBatch({
     "a bloom filter": {
         topic: function() {
             var f = new BloomFilter(100,0.01);
-            var str = [ "hello", "ZEBRA", "dossier flag", "\u100" ];
+            var str = [ "hello", "ZEBRA", "dossier flag", "\\u100" ];
             _.each(str, function(s) { f.add(s) });
             this.callback(null, {f:f, s:str});
         },

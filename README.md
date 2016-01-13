@@ -3,6 +3,20 @@
 A basic javascript bloom filter based on Gary Court's impl of murmur.
 See murmurhash/README.md for attribution/docs and license of the hash function.
 
+## Usage
+
+```javascript
+var BloomFilter = require(...).BloomFilter;
+
+var SIZE = Math.pow(10,7);
+var ERR_RATE = 0.01;
+var filter = new BloomFilter(SIZE,ERR_RATE);
+...
+filter.add("a string")
+...
+if (filter.test("a string")) { ... }
+```
+
 ## License (MIT)
 
 Copyright (c) 2011 Dan Kearns
